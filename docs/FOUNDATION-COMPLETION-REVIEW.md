@@ -1,10 +1,10 @@
 # Foundation Completion Review
 
-**Document ID:** FCR-CWK-001  
-**Version:** 1.0  
-**Review status:** Author review completed — completion blocked by source-baseline gaps  
-**Repository:** Code-With-Kira/CWK_E-Portfolio  
-**Branch:** chore/repository-foundation  
+**Document ID:** FCR-CWK-001
+**Version:** 1.0
+**Review status:** Author review completed — completion blocked by source-baseline gaps
+**Repository:** Code-With-Kira/CWK_E-Portfolio
+**Branch:** chore/repository-foundation
 **Governing plan:** RFP-CWK-001 Version 1.0 (approved planning baseline)
 
 ## 1. Executive decision
@@ -61,25 +61,25 @@ No route names are inferred from navigation labels.
 
 ## 4. Configuration decision register
 
-| Area | Author disposition | Reason / next evidence |
-|---|---|---|
-| Runtime | Resolved: Node.js 24 LTS | Explicitly approved in TSS Revision 1. |
-| Package manager | Resolved: npm | Explicitly approved in TSS Revision 1. |
-| Lockfile | Use npm lockfile (package-lock.json) | Appropriate reproducibility artifact for approved npm; generated with the selected dependency graph. |
-| React state | Resolved: React built-in state | Explicitly approved; do not add external state manager. |
-| Lint / format | Resolved tools: ESLint and Prettier | Explicitly approved; exact config and compatible versions remain to be set. |
-| CI provider | Resolved: GitHub Actions | Explicitly approved; triggers and required checks must align with the final scripts and branch policy. |
-| Framework/library versions | Open | Exact compatible versions are not available in the approved source evidence; do not silently choose a version policy. |
-| npm scripts | Open | Must be tied to the finalized project config and approved test/build behavior. |
-| Route map | Open — blocking | Approved SDD route table is not available in the review source set. |
-| API paths/contracts | Open — blocking for API implementation | Exact paths, methods, schemas, status codes, auth/abuse controls, and failure behavior must be sourced from SDD/SRS or approved decision record. |
-| Environment variables | Open | Derive only from finalized server integration code and deployment environments; never guess names or expose secrets. |
-| Contact integration | Partially resolved | Resend and no permanent application-side submission database are approved; sender/recipient configuration, validation, abuse prevention, and failure handling remain to be defined. |
-| Likes | Partially resolved | Redis-backed persistent visitor identity and unique per-item likes are approved; cookie identity/lifetime/signing and Redis retention/recovery remain open. |
-| GitHub API | Partially resolved | GitHub REST API for repository metadata and Stargazer counts is approved; token policy, caching, rate limits, and fallback remain open. |
-| Analytics | Partially resolved | Vercel Web Analytics is approved; event taxonomy and privacy/configuration details remain open. |
-| UI tokens/assets/breakpoints | Open | Must be verified against original UI references and UIR; no invented values. |
-| Deployment/operations | Open | Domain, environment separation, deployment settings, monitoring, and operational ownership remain open. |
+| Area                         | Author disposition                     | Reason / next evidence                                                                                                                                                              |
+| ---------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Runtime                      | Resolved: Node.js 24 LTS               | Explicitly approved in TSS Revision 1.                                                                                                                                              |
+| Package manager              | Resolved: npm                          | Explicitly approved in TSS Revision 1.                                                                                                                                              |
+| Lockfile                     | Use npm lockfile (package-lock.json)   | Generated and successfully verified with npm ci; review and commit still pending.                                                                                                   |
+| React state                  | Resolved: React built-in state         | Explicitly approved; do not add external state manager.                                                                                                                             |
+| Lint / format                | Resolved tools: ESLint and Prettier    | TypeScript passes; ESLint exits with code 0 but reports a missing Pages directory warning; the latest Prettier check passes.                                                        |
+| CI provider                  | Resolved: GitHub Actions               | Explicitly approved; triggers and required checks must align with the final scripts and branch policy.                                                                              |
+| Framework/library versions   | Open                                   | Exact implementation versions are recorded in DBR-CWK-001 Version 1.1; supported-version and compatibility review remains open.                                                     |
+| npm scripts                  | Implemented                            | Scripts are defined in `package.json`; test and production-build verification remain incomplete because application source and test files do not yet exist.                         |
+| Route map                    | Open — blocking                        | SDD Section 5.2 provides a proposed route map; final route/URL structure remains pending under SRS PD-014 and requires reconciliation with UIR navigation.                          |
+| API paths/contracts          | Open — blocking for API implementation | Exact paths, methods, schemas, status codes, auth/abuse controls, and failure behavior must be sourced from SDD/SRS or approved decision record.                                    |
+| Environment variables        | Open                                   | Derive only from finalized server integration code and deployment environments; never guess names or expose secrets.                                                                |
+| Contact integration          | Partially resolved                     | Resend and no permanent application-side submission database are approved; sender/recipient configuration, validation, abuse prevention, and failure handling remain to be defined. |
+| Likes                        | Partially resolved                     | Redis-backed persistent visitor identity and unique per-item likes are approved; cookie identity/lifetime/signing and Redis retention/recovery remain open.                         |
+| GitHub API                   | Partially resolved                     | GitHub REST API for repository metadata and Stargazer counts is approved; token policy, caching, rate limits, and fallback remain open.                                             |
+| Analytics                    | Partially resolved                     | Vercel Web Analytics is approved; event taxonomy and privacy/configuration details remain open.                                                                                     |
+| UI tokens/assets/breakpoints | Open                                   | Must be verified against original UI references and UIR; no invented values.                                                                                                        |
+| Deployment/operations        | Open                                   | Domain, environment separation, deployment settings, monitoring, and operational ownership remain open.                                                                             |
 
 ## 5. CI design boundary
 
@@ -95,22 +95,22 @@ Until then, a root page or route-group layout could accidentally commit the proj
 
 ## 7. IRC reassessment
 
-| Gate | Finding |
-|---|---|
-| Repository access and isolated working branch | Verified |
-| Node.js 24 selectors | Verified |
-| README and foundation status documentation | Verified |
-| Copilot repository instructions | Created and verified; final owner review remains useful |
-| Canonical routes / collision analysis | Not verified — blocking |
-| Package manifest and lockfile | Not implemented |
-| Next.js application skeleton | Not implemented |
-| ESLint / Prettier / TypeScript commands | Not implemented or executed |
-| Unit/component/e2e test setup | Not implemented or executed |
-| GitHub Actions CI | Not implemented or executed |
-| API and integration contracts | Not verified |
-| Environment/security/operations configuration | Pending |
-| UI token, breakpoint, and asset mapping | Pending |
-| Production readiness | Not met |
+| Gate                                          | Finding                                                                                             |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Repository access and isolated working branch | Verified                                                                                            |
+| Node.js 24 selectors                          | Verified                                                                                            |
+| README and foundation status documentation    | Verified                                                                                            |
+| Copilot repository instructions               | Created and verified; final owner review remains useful                                             |
+| Canonical routes / collision analysis         | Not verified — blocking                                                                             |
+| Package manifest and lockfile                 | Implemented locally; npm install and npm ci verified; review and commit pending                     |
+| Next.js application skeleton                  | Not implemented                                                                                     |
+| ESLint / Prettier / TypeScript commands       | Implemented; TypeScript and Prettier checks passed; ESLint exits 0 with a missing-directory warning |
+| Unit/component/e2e test setup                 | Vitest configured; no test files yet; E2E pending                                                   |
+| GitHub Actions CI                             | Not implemented or executed                                                                         |
+| API and integration contracts                 | Not verified                                                                                        |
+| Environment/security/operations configuration | Pending                                                                                             |
+| UI token, breakpoint, and asset mapping       | Pending                                                                                             |
+| Production readiness                          | Not met                                                                                             |
 
 ## 8. Required source inputs to close this review
 
@@ -128,4 +128,4 @@ If a decision is intentionally left to implementation, record it in a decision l
 
 FCR-CWK-001 Version 1.0 is accepted as the review record. It resolves the decisions that are explicitly supported by approved project context and records the remaining blockers. It does not approve guessed routes or service policies.
 
-The existing branch should remain isolated and reviewable. Once the approved source documents are available and the route/configuration register is closed, implementation can proceed with package configuration, application skeleton, tests, and GitHub Actions in a controlled sequence.
+The existing branch should remain isolated and reviewable. Once the approved source documents are available and the route/configuration register is closed, implementation can proceed with the application skeleton, tests, and GitHub Actions in a controlled sequence. Package configuration has been implemented locally; review and commit remain pending.
