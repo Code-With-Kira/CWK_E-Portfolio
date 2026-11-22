@@ -234,3 +234,7 @@ The owner has approved generating the raw anonymous visitor identifier as **32 c
 ### Owner decision — HMAC signature encoding
 
 The owner has approved encoding the HMAC-SHA-256 signature for the anonymous visitor cookie as **Base64URL without padding**, matching the approved visitor identifier encoding. The signed cookie therefore contains two separately encoded components: the Base64URL-without-padding visitor identifier and its Base64URL-without-padding HMAC-SHA-256 signature. The server must verify the signature before trusting the identifier. This decision specifies the signature encoding only; the exact serialization/delimiter format, cookie name, and cookie path/domain scope remain to be specified in the implementation contract.
+
+### Owner decision — signed-cookie serialization format
+
+The owner has approved the signed anonymous visitor cookie serialization format **`<visitor-id>.<signature>`**, using a single period (`.`) as the delimiter between the separately encoded Base64URL-without-padding visitor identifier and Base64URL-without-padding HMAC-SHA-256 signature. Because Base64URL does not use the period character, the two components can be parsed unambiguously. The server must verify the signature before trusting the visitor identifier. This decision specifies serialization only; the cookie name and cookie path/domain scope remain to be specified.
