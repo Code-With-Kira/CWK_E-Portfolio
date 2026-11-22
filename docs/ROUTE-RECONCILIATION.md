@@ -378,3 +378,9 @@ The project owner approved a four-level severity classification for formal secur
 4. **Low** — minor security concern with limited impact and no immediate threat.
 
 The project owner retains authority to confirm or change an incident's severity. The classification labels and high-level descriptions are approved; detailed objective criteria, impact/likelihood thresholds, response time targets, escalation rules, and severity reassessment triggers remain to be specified before implementation.
+
+### Owner decision — initial incident severity assignment authority
+
+The project owner approved allowing **explicitly authorized incident-response maintainers** to assign an initial **provisional severity** during the incident's initial assessment. The provisional classification must be identified as provisional and recorded with the assigning maintainer and assignment timestamp. The project owner must review and confirm the severity; the project owner retains final authority to confirm or change the classification at any point.
+
+This decision authorizes provisional assignment only. It does not grant every project maintainer incident-response authority or transfer final severity authority. The process and target timeframe for project-owner review, interim handling if the owner is unavailable, and detailed reassessment/escalation triggers remain to be specified before implementation.
