@@ -375,3 +375,10 @@ The project owner approved escalation when an overdue access review is not compl
 ### Formal security incident trigger for persistently unresolved access reviews
 
 The project owner approved treating an access review that remains unresolved for a further seven calendar days after escalation as a formal security incident for assessment and tracking. The project owner must document the incident, assess whether the outstanding access presents a security risk, and determine appropriate corrective action. This trigger is a formal incident-classification and assessment step; it does not automatically mean a security breach or compromise has occurred. The incident record must distinguish confirmed facts from suspected or unverified conditions.
+
+### Notification recipients for formal access-review security incidents
+
+The project owner approved the following notification policy when a persistently unresolved access review is classified as a formal security incident:
+- Notify the project owner immediately.
+- Notify any explicitly authorized security or technical maintainer assigned to incident response.
+- Notifications must not include credentials, secrets, raw visitor identifiers, or sensitive diagnostic payloads.
