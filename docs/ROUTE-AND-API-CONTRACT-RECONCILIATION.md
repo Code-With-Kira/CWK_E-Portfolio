@@ -398,3 +398,7 @@ The project owner approved the following notification policy when a persistently
 - Notify the project owner immediately.
 - Notify any explicitly authorized security or technical maintainer assigned to incident response.
 - Notifications must not include credentials, secrets, raw visitor identifiers, or sensitive diagnostic payloads.
+
+### Email notification channel for formal security incidents
+
+The project owner approved email as the notification channel when a persistently unresolved access review is classified as a formal security incident. Notifications are to be individually addressed to the project owner and assigned, explicitly authorized incident-response maintainers. The project-selected email provider is Resend, using the dedicated administrative sender identity separate from the contact-form sender. The exact sender address and domain remain pending until the Resend account is established and sender-domain verification is completed.
