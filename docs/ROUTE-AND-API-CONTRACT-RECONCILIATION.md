@@ -442,3 +442,9 @@ The project owner approved the following evidence requirements before a formal s
 Only the project owner may formally close an incident. Assigned incident-response maintainers may investigate, document evidence, carry out corrective actions, and recommend closure, but may not independently close it. The project owner must review the evidence and corrective-action status before approving closure.
 
 This decision defines the evidence checklist; it does not by itself specify the incident-record schema, exact closure workflow, or restricted storage location. Those details remain to be specified and verified before implementation.
+
+### Owner decision — formal security incident record storage location
+
+The project owner approved storing formal security incident records as **restricted project administrative documentation**, separate from public project documentation and application source code. Access must be limited to the project owner and explicitly authorized incident-response maintainers who need the records for investigation, response, oversight, or closure.
+
+The selected storage platform and exact location must be verified to support private access controls and the approved one-year retention period after incident closure, including documented, justified extensions and secure deletion when retention ends. Do not assume the existing application repository is private or select a platform without verifying its access and retention capabilities. The platform, exact location, record format/schema, and deletion procedure remain to be specified and verified before implementation.
