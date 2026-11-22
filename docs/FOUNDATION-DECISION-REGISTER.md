@@ -70,6 +70,7 @@ All other unresolved route, API, and configuration decisions remain unchanged.
 | Additional optional Bug Report field | Include **Actual Result**, describing what happened instead; this field is optional. |
 | Additional optional Bug Report field | Include **Environment** as an optional field for relevant context such as browser, operating system, and device. |
 | Additional optional Bug Report field | Include **Screenshot or Attachment** so reporters may provide visual evidence; this field is optional and may be omitted. |
+| Attachment file types | Accept images and documents: PNG, JPG/JPEG, WebP, and PDF. |
 | Scope | Version 1.0 includes Feedback as a distinct user-facing workflow with the three categories above |
 | Status | Scope and category decision recorded for review; processing design and API contract remain pending |
 | Remaining work | Confirm detailed UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
