@@ -258,3 +258,7 @@ The owner has approved the signed anonymous visitor cookie serialization format 
 ### Owner decision — anonymous visitor cookie name
 
 The owner has approved **`cwk_visitor`** as the cookie name for the signed anonymous visitor identifier. The approved name is used without the `__Host-` prefix. This decision establishes the cookie name only; cookie path and domain scope, and any related browser-enforced prefix policy, remain to be specified separately.
+
+### Owner decision — anonymous visitor cookie path
+
+The owner has approved **`/`** as the `cwk_visitor` cookie path. This makes the cookie available across the website's paths, including portfolio pages and API routes where the browser's cookie rules permit it. This decision specifies the cookie path only; cookie domain scope remains to be specified separately.
