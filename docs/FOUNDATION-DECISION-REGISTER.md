@@ -340,3 +340,7 @@ The owner has approved storing the critical diagnostic log access-review registe
 ### Owner decision — access-review record retention
 
 The owner has approved retaining each critical diagnostic log access-review register record for **one year after the date of that review**. At the end of the retention period, the record must be securely deleted unless an unresolved security incident or another legitimate requirement justifies retaining it longer. Any extended retention must be limited to the relevant record, have a documented reason and an accountable owner, and be reviewed for deletion when that reason no longer applies. The secure deletion method, storage platform's deletion capabilities, and process for documenting approved extensions remain to be specified and verified before implementation.
+
+### Owner decision — access-review register format
+
+The owner has approved **Markdown (.md)** as the format for the critical diagnostic log access-review register. The register must use a consistent table for review entries and a separate section for outstanding actions. It remains restricted project administrative documentation, subject to the approved least-privilege access policy and one-year record-retention rule. Markdown format approval does not select a storage platform or location; the platform must still be verified to provide the required private access controls and secure deletion capability before the register is created.
