@@ -107,3 +107,7 @@ Do not implement handlers until those contracts and their security controls are 
 - SRS-CWK-001 Version 1.0, PD-014 and the system/page/navigation requirements.
 - UIR-CWK-001 Version 1.0, Sections 4–7.
 - Original UI references: Introduction & Profile Selection, Personal Portfolio, Professional Worksite, Shared Components & Pages, and Interactive Prototypes.
+
+### Owner clarification — storage and email-provider readiness
+
+The owner has **not selected an attachment storage provider** for Bug Report uploads. The previously raised Vercel Blob option remains a proposal only; the decision is **pending** and will be revisited after implementation has started. Do not provision or implement Vercel Blob (or another attachment-storage service) on the basis of this discussion. The owner has confirmed **Resend as the intended email provider** for the project's email workflows, but does not yet have a Resend account. Resend account creation, sender-domain verification, credential provisioning, and provider configuration therefore remain pending prerequisites; do not invent credentials or represent email delivery as configured or tested.
