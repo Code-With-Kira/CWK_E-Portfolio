@@ -431,3 +431,7 @@ This approval establishes the coverage model but does not identify individual ma
 The project owner approved **12-hour coverage periods** for the 24/7 primary-and-backup incident-response arrangement. Each coverage period must designate one explicitly authorized primary incident responder and one explicitly authorized backup responder. This establishes the intended duration of each coverage assignment, not a named-person rota or a guarantee that the project currently has enough authorized maintainers to staff continuous coverage.
 
 The exact start/end times, time zone used for rota publication, handoff overlap and procedure, rest/availability expectations, named assignments, and contingency arrangements for an unstaffed period remain to be specified and verified before operational implementation.
+
+### Owner decision — incident-response coverage schedule timezone
+
+The project owner approved **Philippine Standard Time (PHT, UTC+8)** as the timezone for publishing and managing the 12-hour incident-response coverage schedule. This timezone applies to coverage scheduling and display only. Formal incident records, event timestamps, and incident-severity review deadline calculations continue to use the separately approved authoritative UTC ISO 8601 format with the `Z` designator. The exact coverage-period start/end times, rota publication format, and handoff procedure remain to be specified before operational implementation.
