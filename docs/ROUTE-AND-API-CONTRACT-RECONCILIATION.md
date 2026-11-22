@@ -364,3 +364,7 @@ The owner has approved **Markdown (.md)** as the format for the critical diagnos
 ### Access-revocation evidence requirement
 
 The project owner approved requiring evidence of completed access revocations in the restricted access-review register. For each revocation, record the affected account, the date, the reviewer, and confirmation that the permission was removed. Do not include credentials or sensitive screenshots. This requirement supplements the approved access-review register format, storage restrictions, review ownership, and retention policy.
+
+### Project-owner sign-off for access reviews
+
+The project owner approved requiring explicit project-owner sign-off for every access review, including reviews performed by a delegated authorized maintainer. The review record must identify the project owner who approved it and record the sign-off date. Delegation of review execution does not transfer the project owner's accountability.
