@@ -411,3 +411,12 @@ The project owner approved the following policy if formal security incident noti
 - If delivery remains unsuccessful after 24 hours, stop automatic retries and create a critical diagnostic log entry for manual intervention.
 - Keep the incident open until the project owner confirms that the notification issue has been addressed.
 - Do not include credentials, secrets, raw visitor identifiers, or sensitive diagnostic payloads in retry records or diagnostic logs.
+
+### Successful incident notification status and delivery confirmation
+
+The project owner approved the following confirmation policy for formal security incident email notifications:
+- Treat a notification as successfully submitted for workflow purposes only when Resend reports an accepted/sent status.
+- Distinguish provider acceptance/sent status from actual inbox delivery; do not represent acceptance as proof that the recipient received or read the email.
+- Record the Resend provider message ID, reported status, and status timestamp in the restricted incident record or other approved operational record.
+- If Resend subsequently reports a bounce or delivery failure, reopen the notification issue for manual handling.
+- Keep notification records free of credentials, secrets, raw visitor identifiers, and sensitive diagnostic payloads.
