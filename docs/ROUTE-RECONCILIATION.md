@@ -296,3 +296,7 @@ The project owner approved escalation when an overdue access review is not compl
 - Notify the project owner again and mark the review as escalated in the restricted access-review register.
 - Require a documented corrective action and a new completion date.
 - Preserve the existing access-control policy; escalation does not silently grant, renew, or extend access and does not change existing permissions.
+
+### Formal security incident trigger for persistently unresolved access reviews
+
+The project owner approved treating an access review that remains unresolved for a further seven calendar days after escalation as a formal security incident for assessment and tracking. The project owner must document the incident, assess whether the outstanding access presents a security risk, and determine appropriate corrective action. This trigger is a formal incident-classification and assessment step; it does not automatically mean a security breach or compromise has occurred. The incident record must distinguish confirmed facts from suspected or unverified conditions.
