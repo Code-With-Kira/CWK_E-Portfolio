@@ -265,6 +265,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — Durable retry queue storage provider
+
+The owner has approved **Upstash Redis** as the storage provider for the durable retry queue used by `proceed_to_dual_profile` event processing. Queue data must use logically separate Redis keys and data structures from Portfolio Like sets and the Proceed event records/cumulative count. This decision selects the provider only; the queue key design, queue record schema and states, atomic enqueue/dequeue and idempotency strategy, scheduling/recovery implementation, persistence/eviction/backup characteristics, retention and cleanup, concurrency controls, and operational failure handling remain to be specified and verified before implementation. The implementation must not assume that provider selection alone establishes the required durability guarantees.
+
 ### Owner decision — Durable retry queue
 
 The owner has approved **durable retry-queue behavior** for `proceed_to_dual_profile` event writes. Pending events must survive application process restarts and deployments rather than being silently lost. The retry mechanism must resume eligible pending work after recovery, preserving the approved bounded retry policy (initial attempt immediately, then retries after 5 seconds, 15 seconds, and 30 seconds; four total attempts maximum) where practical. Queue processing must preserve event idempotency and prevent duplicate event records or duplicate cumulative-count increments, including when a write may have succeeded before an ambiguous failure or interruption. Once the approved attempt limit is exhausted, the event is marked as exhausted/failed and is not retried indefinitely. This owner decision approves durability and recovery behavior only; the queue technology and storage location, event state/schema, atomic enqueue/write design, exact retry timing across downtime, concurrency/locking, cleanup/retention of queue records, observability, and operational failure handling remain to be specified before implementation.
