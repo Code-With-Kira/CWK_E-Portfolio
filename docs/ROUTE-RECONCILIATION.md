@@ -115,3 +115,7 @@ The owner has **not selected an attachment storage provider** for Bug Report upl
 ### Owner decision — anonymous visitor cookie lifetime
 
 The owner has selected a **one-day (24-hour) lifetime** for the anonymous visitor identity cookie used by the likes feature. This is the cookie lifetime only; it does **not** authorize automatic expiration or deletion of persistent like records in Upstash Redis. After the identity cookie expires, a later visit may receive a new anonymous identity and therefore may submit another like for the same content item. This permits repeat likes over time from the same browser/device and does not represent one like per human. The exact cookie renewal behavior, signing/rotation, SameSite policy, and other cookie security settings remain open; do not infer a sliding-renewal policy from the one-day lifetime decision.
+
+### Owner decision — anonymous visitor cookie renewal
+
+The owner has selected **Option A — Fixed expiration** for the anonymous visitor identity cookie. The cookie expires **24 hours after it is first issued**; visits and interactions do not reset or extend that expiration. This is a fixed 24-hour lifetime, not a sliding expiration. The previously recorded one-day lifetime remains in effect. Cookie signing/rotation, SameSite and other security settings remain open.
