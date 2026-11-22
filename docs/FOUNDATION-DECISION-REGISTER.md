@@ -476,3 +476,9 @@ These are project-owner review targets. They do not authorize delaying urgent co
 The project owner approved that the review clock for a provisional incident severity assignment starts at the timestamp when an explicitly authorized incident-response maintainer first records that provisional severity in the formal incident record. That recorded timestamp is the reference point for calculating the applicable project-owner review target. The timestamp must be recorded consistently and must not be backdated or silently changed; any correction must preserve an auditable explanation and the original value.
 
 The time-zone convention, authoritative timestamp source/format, after-hours coverage, owner-unavailability procedure, and missed-target escalation remain to be specified before implementation.
+
+### Owner decision — authoritative incident timestamp standard
+
+The project owner approved **UTC using ISO 8601 format** as the authoritative timestamp standard for formal incident records and incident-severity review deadlines. Timestamps must include the UTC designator `Z`, for example `2026-11-23T14:30:00Z`. UTC is authoritative for recording, ordering, and deadline calculations. Local time may be displayed for readability, but must not replace or alter the authoritative UTC value.
+
+The authoritative clock/source, timestamp precision, clock synchronization and drift handling, and after-hours coverage remain to be specified before implementation.
