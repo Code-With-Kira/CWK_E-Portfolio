@@ -190,6 +190,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — cumulative Proceed count deduplication
+
+The owner has approved counting **unique anonymous visitor-cookie identities**, rather than every click, toward the cumulative `proceed_to_dual_profile` count. A visitor clicking Proceed repeatedly while presenting the same valid `cwk_visitor` identity must contribute at most one increment to the cumulative count. Because the approved cookie has a fixed 24-hour lifetime and is not renewed by activity, a visitor whose cookie expires and who later receives a new anonymous identity may be counted again; this is a count of distinct anonymous cookie identities, not a guaranteed count of distinct human beings or lifetime unique people. The exact atomic deduplication mechanism and any supporting Redis data structure/retention requirements remain to be specified before implementation.
+
 ### Owner decision — engagement-event retention and cumulative count
 
 The owner has approved a **90-day retention period** for individual `proceed_to_dual_profile` event records in Upstash Redis, with automatic deletion when each record reaches the end of its retention period. The system must maintain a separate cumulative Proceed count that is not deleted or reset when individual event records expire; the aggregate is retained indefinitely unless a future owner decision changes this policy. Expiration of these engagement-event records must not reset, decrement, or otherwise alter Portfolio Like counts or Like membership records, which remain governed by their separate storage and retention policy. This approval establishes the retention period and aggregate-count behavior only; exact Redis key/data structures, expiry enforcement, reporting, privacy controls, and failure/recovery behavior remain to be specified before implementation.
