@@ -340,3 +340,7 @@ The owner has approved **least-privilege access** to critical diagnostic logs in
 ### Owner decision — critical diagnostic log access review cadence
 
 The owner has approved a **90-day access review cadence** for permissions to view critical diagnostic logs in Vercel Runtime Logs. Reviews must also occur promptly whenever a maintainer leaves the project or changes responsibilities; access no longer required must be revoked promptly rather than waiting for the next scheduled review. This cadence supplements the approved least-privilege policy and individual-account requirement. The review owner, evidence/recordkeeping method, and exact Vercel role assignments remain to be specified before implementation.
+
+### Owner decision — critical diagnostic log access review ownership
+
+The owner has approved the **project owner as the accountable owner** for scheduled and event-driven access reviews covering critical diagnostic logs in Vercel Runtime Logs. The project owner may delegate the execution of a review to an explicitly authorized maintainer, but remains accountable for ensuring the review is completed, access is appropriate, and unnecessary permissions are revoked promptly. The review evidence/recordkeeping format and exact Vercel role assignments remain to be specified before implementation.
