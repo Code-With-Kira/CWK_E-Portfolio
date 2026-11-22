@@ -352,3 +352,7 @@ The owner has approved a **restricted access-review register** as the evidence r
 ### Owner decision — access-review register storage location
 
 The owner has approved storing the critical diagnostic log access-review register as **restricted project administrative documentation**, separate from public project documentation and application source code. Access must be limited to the project owner and explicitly authorized maintainers who need it for review or oversight. The register must not be placed in a publicly accessible location. The exact storage location and platform must be verified to provide the required private access controls before the register is created; do not assume that the existing application repository is private. The register's format and retention period remain to be specified.
+
+### Owner decision — access-review record retention
+
+The owner has approved retaining each critical diagnostic log access-review register record for **one year after the date of that review**. At the end of the retention period, the record must be securely deleted unless an unresolved security incident or another legitimate requirement justifies retaining it longer. Any extended retention must be limited to the relevant record, have a documented reason and an accountable owner, and be reviewed for deletion when that reason no longer applies. The secure deletion method, storage platform's deletion capabilities, and process for documenting approved extensions remain to be specified and verified before implementation.
