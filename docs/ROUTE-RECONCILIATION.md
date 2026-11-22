@@ -190,6 +190,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — Durable retry queue record retention
+
+The owner has approved a **7-day retention period** for durable retry queue records after they reach a terminal state, whether successfully processed or exhausted/failed. Queue records must be automatically deleted after that retention period. This retention decision applies to retry-queue records only; it does not change the separately approved 90-day retention for individual `proceed_to_dual_profile` event records or the indefinite lifetime of the cumulative Proceed count. The exact timestamp basis, cleanup mechanism/schedule, handling of cleanup failures, and verification/monitoring of deletion remain to be specified before implementation.
+
 ### Owner decision — Durable retry queue storage provider
 
 The owner has approved **Upstash Redis** as the storage provider for the durable retry queue used by `proceed_to_dual_profile` event processing. Queue data must use logically separate Redis keys and data structures from Portfolio Like sets and the Proceed event records/cumulative count. This decision selects the provider only; the queue key design, queue record schema and states, atomic enqueue/dequeue and idempotency strategy, scheduling/recovery implementation, persistence/eviction/backup characteristics, retention and cleanup, concurrency controls, and operational failure handling remain to be specified and verified before implementation. The implementation must not assume that provider selection alone establishes the required durability guarantees.
