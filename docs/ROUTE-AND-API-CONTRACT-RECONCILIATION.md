@@ -424,3 +424,7 @@ The project owner approved the following confirmation policy for formal security
 ### One-year retention of formal incident notification records
 
 The project owner approved retaining formal incident notification records for one year after the associated incident is closed. Retention may be extended only when an investigation remains unresolved or another legitimate requirement justifies it. Each extension must have its reason and accountable owner documented. Records must be securely deleted when the applicable retention period ends. The exact storage location, deletion mechanism, and any legal or provider-specific retention constraints remain subject to verification before implementation.
+
+### Project-owner-only formal incident closure authority
+
+The project owner approved the rule that only the project owner may formally close a security incident. Assigned incident-response maintainers may investigate, document evidence, carry out corrective actions, and recommend closure, but they may not independently close the incident. The project owner must review the available evidence and corrective-action status and explicitly approve closure. The incident record must document the closure decision, approver, and closure date. Closure criteria, required evidence fields, and the restricted incident-record location remain to be specified and verified before implementation.
