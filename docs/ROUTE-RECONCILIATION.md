@@ -384,3 +384,14 @@ The project owner retains authority to confirm or change an incident's severity.
 The project owner approved allowing **explicitly authorized incident-response maintainers** to assign an initial **provisional severity** during the incident's initial assessment. The provisional classification must be identified as provisional and recorded with the assigning maintainer and assignment timestamp. The project owner must review and confirm the severity; the project owner retains final authority to confirm or change the classification at any point.
 
 This decision authorizes provisional assignment only. It does not grant every project maintainer incident-response authority or transfer final severity authority. The process and target timeframe for project-owner review, interim handling if the owner is unavailable, and detailed reassessment/escalation triggers remain to be specified before implementation.
+
+### Owner decision — project-owner review targets for provisional incident severity
+
+The project owner approved the following target timeframes for reviewing and confirming provisional incident severity assignments:
+
+- **Critical:** immediately.
+- **High:** within 4 hours.
+- **Medium:** within 24 hours.
+- **Low:** within 3 calendar days.
+
+These are project-owner review targets. They do not authorize delaying urgent containment, investigation, notification, or corrective action while review is pending. The clock-start definition, time-zone convention, after-hours coverage, owner-unavailability procedure, and escalation when a target is missed remain to be specified before implementation.
