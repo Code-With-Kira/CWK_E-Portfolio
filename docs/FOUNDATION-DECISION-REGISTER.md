@@ -352,3 +352,11 @@ The project owner approved requiring evidence of completed access revocations in
 ### Project-owner sign-off for access reviews
 
 The project owner approved requiring explicit project-owner sign-off for every access review, including reviews performed by a delegated authorized maintainer. The review record must identify the project owner who approved it and record the sign-off date. Delegation of review execution does not transfer the project owner's accountability.
+
+### Overdue access-review handling
+
+The project owner approved the following policy for overdue scheduled access reviews:
+- Notify the project owner when a review becomes overdue.
+- Record the overdue status and notification date in the restricted access-review register.
+- Keep the review outstanding until it has been completed and received the required project-owner sign-off.
+- Do not automatically extend or renew access merely because a review is overdue. Existing access remains subject to the approved least-privilege policy and any independent authorization or expiry requirements.
