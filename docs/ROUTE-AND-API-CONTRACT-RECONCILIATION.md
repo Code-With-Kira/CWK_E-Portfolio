@@ -486,3 +486,9 @@ The project owner approved the following target timeframes for reviewing and con
 - **Low:** within 3 calendar days.
 
 These are project-owner review targets. They do not authorize delaying urgent containment, investigation, notification, or corrective action while review is pending. The clock-start definition, time-zone convention, after-hours coverage, owner-unavailability procedure, and escalation when a target is missed remain to be specified before implementation.
+
+### Owner decision — start of the provisional severity review clock
+
+The project owner approved that the review clock for a provisional incident severity assignment starts at the timestamp when an explicitly authorized incident-response maintainer first records that provisional severity in the formal incident record. That recorded timestamp is the reference point for calculating the applicable project-owner review target. The timestamp must be recorded consistently and must not be backdated or silently changed; any correction must preserve an auditable explanation and the original value.
+
+The time-zone convention, authoritative timestamp source/format, after-hours coverage, owner-unavailability procedure, and missed-target escalation remain to be specified before implementation.
