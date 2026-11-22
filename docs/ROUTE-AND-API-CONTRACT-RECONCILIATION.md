@@ -198,3 +198,7 @@ No default choices are silently selected in this document. PD-014-A and FB-001 a
 - TSS-CWK-001 v1.0 Revision 1: approved toolchain and environment separation expectations.
 - UIR-CWK-001 v1.0: page/component inventory and navigation verification gaps.
 - RFP-CWK-001 v1.0 (controlled amendments): staged implementation and no-guessing boundary.
+
+### Owner clarification — storage and email-provider readiness
+
+The owner has **not selected an attachment storage provider** for Bug Report uploads. The previously raised Vercel Blob option remains a proposal only; the decision is **pending** and will be revisited after implementation has started. Do not provision or implement Vercel Blob (or another attachment-storage service) on the basis of this discussion. The owner has confirmed **Resend as the intended email provider** for the project's email workflows, but does not yet have a Resend account. Resend account creation, sender-domain verification, credential provisioning, and provider configuration therefore remain pending prerequisites; do not invent credentials or represent email delivery as configured or tested.
