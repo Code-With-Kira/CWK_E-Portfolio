@@ -285,3 +285,7 @@ The project owner approved the following policy for overdue scheduled access rev
 - Record the overdue status and notification date in the restricted access-review register.
 - Keep the review outstanding until it has been completed and received the required project-owner sign-off.
 - Do not automatically extend or renew access merely because a review is overdue. Existing access remains subject to the approved least-privilege policy and any independent authorization or expiry requirements.
+
+### Seven-calendar-day overdue review resolution period
+
+The project owner approved a resolution period of seven calendar days after the overdue notification for completing an overdue access review and obtaining the required project-owner sign-off. If the review cannot be completed within that period, the project owner must document the reason, outstanding actions, and a revised completion date in the restricted access-review register. This resolution period does not automatically extend or renew any access.
