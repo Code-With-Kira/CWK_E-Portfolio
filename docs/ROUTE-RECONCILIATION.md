@@ -190,6 +190,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — Proceed event retry approach
+
+The owner has approved a **non-blocking, limited automatic retry approach** for failed `proceed_to_dual_profile` event writes to Upstash Redis. The visitor must be allowed to continue to the Dual Profile selection experience without waiting for retries. Retry processing must be designed to prevent duplicate event records and duplicate cumulative-count increments when an earlier write may have succeeded despite an ambiguous response; the approved unique-visitor deduplication rule remains in force. Retries must be bounded rather than continuing indefinitely, and failures that remain unresolved must be logged safely. This approval establishes the retry approach only; the retry schedule, maximum attempts or elapsed retry period, whether/how work is queued, persistence and durability of retry jobs, idempotency key and atomic Redis operation design, replay/recovery behavior, and alerting remain unresolved and must be specified before implementation.
+
 ### Owner decision — Proceed event recording failure behavior
 
 The owner has approved the following failure-handling behavior for the `proceed_to_dual_profile` event when Upstash Redis is temporarily unavailable or the event cannot be persisted: (1) the visitor must still be allowed to continue to the Dual Profile selection experience; (2) the system must not indicate or represent that the event was successfully recorded; (3) the failure must be logged server-side using safe diagnostic information and without exposing secrets or sensitive internals to the visitor; and (4) the cumulative Proceed count must increase only when the event has been successfully recorded according to the approved deduplication rule. This approval does not define retries, queuing, replay, alerting, log retention, or recovery/reconciliation behavior; those remain open for specification before implementation.
