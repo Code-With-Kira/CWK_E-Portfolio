@@ -62,10 +62,11 @@ All other unresolved route, API, and configuration decisions remain unchanged.
 |---|---|
 | Decision ID | FB-001 |
 | Related requirements | SRS MOD-010 Feedback; SDD TD-011 |
-| Owner decision | Include a separate Feedback workflow in Version 1.0; do not merge it into Contact |
-| Scope | Version 1.0 includes Feedback as a distinct user-facing workflow |
-| Status | Scope decision recorded for review; processing design and API contract remain pending |
-| Remaining work | Confirm UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
+| Owner decision | Include a separate Feedback workflow in Version 1.0; do not merge it into Contact; adopt three submission categories |
+| Approved categories | **Bug Report** — report a problem and provide reproduction steps; **General Feedback** — suggestions, comments, and improvement ideas; **Security Concern** — a safe initial description, with guidance not to submit credentials or sensitive exploit details through the public form |
+| Scope | Version 1.0 includes Feedback as a distinct user-facing workflow with the three categories above |
+| Status | Scope and category decision recorded for review; processing design and API contract remain pending |
+| Remaining work | Confirm detailed UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
 
 This decision does not establish a URL, API endpoint, storage provider, retention period, or delivery mechanism. SDD TD-011 remains open until those details are resolved through controlled review.
 
