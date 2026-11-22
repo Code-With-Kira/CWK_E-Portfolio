@@ -504,3 +504,9 @@ The authoritative clock/source, timestamp precision, clock synchronization and d
 The project owner approved the **server-side system clock of the Vercel runtime** as the authoritative source for generating formal incident timestamps. Incident timestamps must be generated server-side; browser clocks and client-supplied timestamps must not be trusted as authoritative. Generated timestamps must use the approved UTC ISO 8601 format with the `Z` designator.
 
 The runtime clock's synchronization guarantees, drift detection/handling, timestamp precision, and operational verification remain to be specified and verified before implementation. This approval does not assert that Vercel guarantees a particular clock-accuracy bound.
+
+### Owner decision — 24/7 formal security incident-response coverage
+
+The project owner approved **24 hours a day, 7 days a week (24/7) incident-response coverage**, including weekends and holidays. Formal incident-response responsibilities remain active outside normal business hours. Critical incidents must not be deferred until the next business day; urgent containment, investigation, notification, and corrective action must proceed without waiting for normal business hours or routine owner review. Coverage responsibilities are to be assigned to explicitly authorized incident-response maintainers, and the project owner retains final authority under the approved incident-governance decisions.
+
+This approval establishes the continuous coverage requirement; it does not by itself establish a staffed on-call rota, individual availability commitments, backup/contact arrangements, response-time guarantees beyond the separately approved owner-review targets, or an owner-unavailability procedure. The coverage schedule, named/role-based assignments, escalation and backup arrangements, contact method, and operational feasibility remain to be specified before implementation.
