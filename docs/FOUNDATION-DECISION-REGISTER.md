@@ -265,6 +265,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — Proceed event recording failure behavior
+
+The owner has approved the following failure-handling behavior for the `proceed_to_dual_profile` event when Upstash Redis is temporarily unavailable or the event cannot be persisted: (1) the visitor must still be allowed to continue to the Dual Profile selection experience; (2) the system must not indicate or represent that the event was successfully recorded; (3) the failure must be logged server-side using safe diagnostic information and without exposing secrets or sensitive internals to the visitor; and (4) the cumulative Proceed count must increase only when the event has been successfully recorded according to the approved deduplication rule. This approval does not define retries, queuing, replay, alerting, log retention, or recovery/reconciliation behavior; those remain open for specification before implementation.
+
 ### Owner decision — cumulative Proceed count deduplication
 
 The owner has approved counting **unique anonymous visitor-cookie identities**, rather than every click, toward the cumulative `proceed_to_dual_profile` count. A visitor clicking Proceed repeatedly while presenting the same valid `cwk_visitor` identity must contribute at most one increment to the cumulative count. Because the approved cookie has a fixed 24-hour lifetime and is not renewed by activity, a visitor whose cookie expires and who later receives a new anonymous identity may be counted again; this is a count of distinct anonymous cookie identities, not a guaranteed count of distinct human beings or lifetime unique people. The exact atomic deduplication mechanism and any supporting Redis data structure/retention requirements remain to be specified before implementation.
