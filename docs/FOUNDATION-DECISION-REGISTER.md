@@ -412,3 +412,17 @@ The project owner approved retaining formal incident notification records for on
 ### Project-owner-only formal incident closure authority
 
 The project owner approved the rule that only the project owner may formally close a security incident. Assigned incident-response maintainers may investigate, document evidence, carry out corrective actions, and recommend closure, but they may not independently close the incident. The project owner must review the available evidence and corrective-action status and explicitly approve closure. The incident record must document the closure decision, approver, and closure date. Closure criteria, required evidence fields, and the restricted incident-record location remain to be specified and verified before implementation.
+
+### Owner decision — formal security incident closure evidence requirements
+
+The project owner approved the following evidence requirements before a formal security incident may be closed:
+
+1. The incident has been investigated and the findings are documented.
+2. Required corrective actions are completed, or any remaining actions have documented justification and assigned ownership.
+3. Relevant incident notifications have been addressed.
+4. Outstanding risks and follow-up actions are documented.
+5. The closure decision and date are recorded, including the project owner's explicit approval.
+
+Only the project owner may formally close an incident. Assigned incident-response maintainers may investigate, document evidence, carry out corrective actions, and recommend closure, but may not independently close it. The project owner must review the evidence and corrective-action status before approving closure.
+
+This decision defines the evidence checklist; it does not by itself specify the incident-record schema, exact closure workflow, or restricted storage location. Those details remain to be specified and verified before implementation.
