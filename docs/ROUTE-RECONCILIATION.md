@@ -407,3 +407,9 @@ The time-zone convention, authoritative timestamp source/format, after-hours cov
 The project owner approved **UTC using ISO 8601 format** as the authoritative timestamp standard for formal incident records and incident-severity review deadlines. Timestamps must include the UTC designator `Z`, for example `2026-11-23T14:30:00Z`. UTC is authoritative for recording, ordering, and deadline calculations. Local time may be displayed for readability, but must not replace or alter the authoritative UTC value.
 
 The authoritative clock/source, timestamp precision, clock synchronization and drift handling, and after-hours coverage remain to be specified before implementation.
+
+### Owner decision — authoritative incident clock source
+
+The project owner approved the **server-side system clock of the Vercel runtime** as the authoritative source for generating formal incident timestamps. Incident timestamps must be generated server-side; browser clocks and client-supplied timestamps must not be trusted as authoritative. Generated timestamps must use the approved UTC ISO 8601 format with the `Z` designator.
+
+The runtime clock's synchronization guarantees, drift detection/handling, timestamp precision, and operational verification remain to be specified and verified before implementation. This approval does not assert that Vercel guarantees a particular clock-accuracy bound.
