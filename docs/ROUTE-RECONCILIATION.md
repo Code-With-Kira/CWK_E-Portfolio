@@ -163,3 +163,7 @@ The owner has approved encoding the HMAC-SHA-256 signature for the anonymous vis
 ### Owner decision — signed-cookie serialization format
 
 The owner has approved the signed anonymous visitor cookie serialization format **`<visitor-id>.<signature>`**, using a single period (`.`) as the delimiter between the separately encoded Base64URL-without-padding visitor identifier and Base64URL-without-padding HMAC-SHA-256 signature. Because Base64URL does not use the period character, the two components can be parsed unambiguously. The server must verify the signature before trusting the visitor identifier. This decision specifies serialization only; the cookie name and cookie path/domain scope remain to be specified.
+
+### Owner decision — anonymous visitor cookie name
+
+The owner has approved **`cwk_visitor`** as the cookie name for the signed anonymous visitor identifier. The approved name is used without the `__Host-` prefix. This decision establishes the cookie name only; cookie path and domain scope, and any related browser-enforced prefix policy, remain to be specified separately.
