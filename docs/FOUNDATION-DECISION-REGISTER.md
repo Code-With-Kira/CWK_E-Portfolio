@@ -68,6 +68,7 @@ All other unresolved route, API, and configuration decisions remain unchanged.
 | Required Bug Report field | **Bug Title** is required and must summarize the issue. A Bug Report must include it, while **Steps to Reproduce** remains optional. |
 | Additional optional Bug Report field | Include **Expected Result**, describing what the user thought should happen; this field is optional. |
 | Additional optional Bug Report field | Include **Actual Result**, describing what happened instead; this field is optional. |
+| Additional optional Bug Report field | Include **Environment** as an optional field for relevant context such as browser, operating system, and device. |
 | Scope | Version 1.0 includes Feedback as a distinct user-facing workflow with the three categories above |
 | Status | Scope and category decision recorded for review; processing design and API contract remain pending |
 | Remaining work | Confirm detailed UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
