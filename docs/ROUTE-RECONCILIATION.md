@@ -155,3 +155,7 @@ The owner has approved the following handling for an invalid, tampered, expired,
 ### Owner decision — anonymous visitor identifier format
 
 The owner has approved generating the raw anonymous visitor identifier as **32 cryptographically random bytes (256 bits)** and encoding those bytes as **Base64URL without padding** before cookie signing. The encoded identifier is the cookie payload value; its HMAC-SHA-256 signature is a separate value and must be verified before the identifier is trusted. The identifier must be generated using a cryptographically secure random number generator. This format decision does not change the separate `VISITOR_HASH_SECRET` derivation process, the 24-hour fixed cookie lifetime, or the approved cookie security attributes. Exact signed-cookie serialization/delimiter format and signature encoding remain to be specified in the implementation contract.
+
+### Owner decision — HMAC signature encoding
+
+The owner has approved encoding the HMAC-SHA-256 signature for the anonymous visitor cookie as **Base64URL without padding**, matching the approved visitor identifier encoding. The signed cookie therefore contains two separately encoded components: the Base64URL-without-padding visitor identifier and its Base64URL-without-padding HMAC-SHA-256 signature. The server must verify the signature before trusting the identifier. This decision specifies the signature encoding only; the exact serialization/delimiter format, cookie name, and cookie path/domain scope remain to be specified in the implementation contract.
