@@ -5,7 +5,7 @@
 **Date:** 2026-11-22  
 **Repository:** Code-With-Kira/CWK_E-Portfolio  
 **Working branch:** `chore/repository-foundation`  
-**Status:** Author reconciliation completed; owner decisions still required for unresolved mappings
+**Status:** Author reconciliation completed; PD-014-A owner decision recorded for review; other owner decisions remain open
 
 ## 1. Purpose and authority
 
@@ -34,7 +34,7 @@ The following paths are transcribed from SDD Section 5.2. Their presence in the 
 | `/professional/services` | Services | Professional Services | Candidate; verify navigation |
 | `/professional/articles` | Articles and Research | Professional Articles & Researches | Candidate; verify exact label and content scope |
 | `/professional/articles/[slug]` | Article Details | Professional article detail implied by Articles & Researches | Candidate; slug format and invalid-slug behavior not specified |
-| `/contact` | Shared Contact | Shared Contact; Personal Contact / Send a Message; Professional inquiry pathways | **Unresolved:** sources do not establish whether all contact entry points converge on one page or have distinct experiences |
+| `/contact` | Shared Contact | Shared Contact; Personal Contact / Send a Message; Professional inquiry pathways | **Owner decision recorded for review (PD-014-A):** one shared canonical `/contact` page with Personal/Professional visual context; full PD-014 closure remains pending |
 | `/license` | License | Shared License | Candidate |
 | `/terms` | Terms | Shared Terms | Candidate |
 | `/privacy` | Privacy | Shared Privacy | Candidate |
@@ -50,7 +50,7 @@ The following UIR page/component identities do not have a dedicated standalone r
 | UIR identity | Known context | Required resolution |
 |---|---|---|
 | Personal Work With Me | Personal portfolio | Determine whether this is a section on Personal Home, a standalone page, or an entry point to Contact |
-| Personal Contact / Send a Message | Personal portfolio | Determine whether it uses the shared `/contact` page or a distinct Personal contact experience |
+| Personal Contact / Send a Message | Personal portfolio | **Owner decision recorded for review (PD-014-A):** use the shared `/contact` page with Personal visual context |
 | Personal Common Questions | Personal portfolio | Determine whether it is a standalone page or a section |
 | Personal Activity | Personal portfolio activity/footer elements | Determine whether this is an embedded component or a standalone activity page |
 | Professional More About Me | Professional worksite | Determine whether it is a standalone page or a section |
@@ -65,7 +65,7 @@ PD-014 remains pending. Before route files are authored, the project owner must 
 
 1. Whether the SDD proposed paths are accepted unchanged.
 2. Whether Personal Work With Me, Common Questions, and Professional More About Me are pages or sections.
-3. Whether Personal and Professional contact entry points share one canonical page.
+3. **PD-014-A — owner decision recorded for review:** Personal and Professional contact entry points share one canonical `/contact` page with Personal/Professional visual context. This resolves only the contact-destination question; PD-014 remains open for all other route decisions.
 4. Where Resource/Activity and the GitHub/AI Usage activity selector appear in the navigation and page hierarchy.
 5. Exact navigation labels and destination mapping from the original UI references.
 6. Dynamic content slug constraints, uniqueness scope, case handling, and invalid-slug behavior.
