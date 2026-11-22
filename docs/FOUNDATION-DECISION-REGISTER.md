@@ -182,3 +182,7 @@ CI scope: dependency installation, lint, type checking, unit/component tests, pr
 - TSS-CWK-001 v1.0 Revision 1: Sections 10–18.
 - UIR-CWK-001 v1.0: Personal, Professional, and Shared page inventory.
 - RFP-CWK-001 v1.0: controlled foundation scope and implementation sequence.
+
+### Owner clarification — storage and email-provider readiness
+
+The owner has **not selected an attachment storage provider** for Bug Report uploads. The previously raised Vercel Blob option remains a proposal only; the decision is **pending** and will be revisited after implementation has started. Do not provision or implement Vercel Blob (or another attachment-storage service) on the basis of this discussion. The owner has confirmed **Resend as the intended email provider** for the project's email workflows, but does not yet have a Resend account. Resend account creation, sender-domain verification, credential provisioning, and provider configuration therefore remain pending prerequisites; do not invent credentials or represent email delivery as configured or tested.
