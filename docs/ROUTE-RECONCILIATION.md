@@ -329,3 +329,7 @@ The project owner approved the following confirmation policy for formal security
 - Record the Resend provider message ID, reported status, and status timestamp in the restricted incident record or other approved operational record.
 - If Resend subsequently reports a bounce or delivery failure, reopen the notification issue for manual handling.
 - Keep notification records free of credentials, secrets, raw visitor identifiers, and sensitive diagnostic payloads.
+
+### One-year retention of formal incident notification records
+
+The project owner approved retaining formal incident notification records for one year after the associated incident is closed. Retention may be extended only when an investigation remains unresolved or another legitimate requirement justifies it. Each extension must have its reason and accountable owner documented. Records must be securely deleted when the applicable retention period ends. The exact storage location, deletion mechanism, and any legal or provider-specific retention constraints remain subject to verification before implementation.
