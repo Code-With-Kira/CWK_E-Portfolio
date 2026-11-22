@@ -386,3 +386,12 @@ The project owner approved the following notification policy when a persistently
 ### Email notification channel for formal security incidents
 
 The project owner approved email as the notification channel when a persistently unresolved access review is classified as a formal security incident. Notifications are to be individually addressed to the project owner and assigned, explicitly authorized incident-response maintainers. The project-selected email provider is Resend, using the dedicated administrative sender identity separate from the contact-form sender. The exact sender address and domain remain pending until the Resend account is established and sender-domain verification is completed.
+
+### Incident notification email delivery-failure handling
+
+The project owner approved the following policy if formal security incident notification email delivery fails:
+- Retry delivery once every hour for up to 24 hours.
+- Avoid duplicate incident notifications when delivery status is ambiguous; use an idempotent notification identity or equivalent delivery-state control where supported.
+- If delivery remains unsuccessful after 24 hours, stop automatic retries and create a critical diagnostic log entry for manual intervention.
+- Keep the incident open until the project owner confirms that the notification issue has been addressed.
+- Do not include credentials, secrets, raw visitor identifiers, or sensitive diagnostic payloads in retry records or diagnostic logs.
