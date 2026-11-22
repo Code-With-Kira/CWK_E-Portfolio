@@ -266,3 +266,7 @@ The owner has approved **`/`** as the `cwk_visitor` cookie path. This makes the 
 ### Owner decision — anonymous visitor cookie domain scope
 
 The owner has approved **omitting the `Domain` attribute** from the `cwk_visitor` cookie. The cookie is therefore host-only and is sent only to the exact hostname that issued it, rather than being shared automatically with sibling subdomains. This decision specifies domain scope only; the production hostname and any future need for cross-subdomain identity remain separate decisions.
+
+### Owner decision — anonymous visitor cookie expiration attributes
+
+The owner has approved setting both **`Max-Age=86400`** and **`Expires`** on the `cwk_visitor` cookie. `Max-Age` is 86,400 seconds (24 hours), and `Expires` must represent the corresponding UTC expiration timestamp calculated from the cookie's original issuance time. Neither attribute may be refreshed or extended by ordinary visits or interactions; the approved lifetime remains fixed at 24 hours from first issuance. This decision specifies browser cookie expiration attributes and does not change server-side signature validation or the approved fixed-lifetime policy.
