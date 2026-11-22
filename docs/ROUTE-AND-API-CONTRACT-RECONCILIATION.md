@@ -344,3 +344,7 @@ The owner has approved a **90-day access review cadence** for permissions to vie
 ### Owner decision — critical diagnostic log access review ownership
 
 The owner has approved the **project owner as the accountable owner** for scheduled and event-driven access reviews covering critical diagnostic logs in Vercel Runtime Logs. The project owner may delegate the execution of a review to an explicitly authorized maintainer, but remains accountable for ensuring the review is completed, access is appropriate, and unnecessary permissions are revoked promptly. The review evidence/recordkeeping format and exact Vercel role assignments remain to be specified before implementation.
+
+### Owner decision — critical diagnostic log access review register
+
+The owner has approved a **restricted access-review register** as the evidence record for scheduled and event-driven reviews of access to critical diagnostic logs in Vercel Runtime Logs. Each review record must capture the review date, reviewer, authorized accounts and assigned roles, whether each permission remains necessary, changes made (including access revocations), and outstanding actions with their completion status. The register must be access-restricted to the project owner and explicitly authorized maintainers with a need to perform or verify the review. It must not contain credentials, secrets, or diagnostic-log contents. The register's storage location, exact format, and retention period remain to be specified before implementation.
