@@ -90,7 +90,7 @@ Do not infer these answers from page names alone.
 2. **General Feedback** — suggestions, comments, and improvement ideas.
 3. **Security Concern** — a safe initial description, with clear guidance not to submit credentials or sensitive exploit details through the public form.
 
-No feedback endpoint is established in the SDD API table; SDD TD-011 remains open for processing design. Do not silently route feedback through `/api/contact` or invent a feedback endpoint, schema, or retention policy. The detailed UI fields, processing path, provider/storage, abuse controls, response behavior, and retention must be specified before implementation.
+For the Bug Report category, the owner has additionally decided that the form shall include a **Steps to Reproduce** field and that this field is **optional**. A Bug Report may be submitted without reproduction steps when all required fields are completed. This decision does not define which other fields are required or their validation constraints.\n\nNo feedback endpoint is established in the SDD API table; SDD TD-011 remains open for processing design. Do not silently route feedback through `/api/contact` or invent a feedback endpoint, schema, or retention policy. The remaining UI fields and constraints, processing path, provider/storage, abuse controls, response behavior, and retention must be specified before implementation.
 
 ### 3.2 Contact behavior established by SDD
 
