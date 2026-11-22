@@ -66,6 +66,7 @@ All other unresolved route, API, and configuration decisions remain unchanged.
 | Approved categories | **Bug Report** — report a problem and provide reproduction steps; **General Feedback** — suggestions, comments, and improvement ideas; **Security Concern** — a safe initial description, with guidance not to submit credentials or sensitive exploit details through the public form |
 | Additional Bug Report decision | Include a **Steps to Reproduce** field; it is **optional**. Users may submit a Bug Report without it when all required fields are completed. Required status and constraints of other fields remain to be defined. |
 | Required Bug Report field | **Bug Title** is required and must summarize the issue. A Bug Report must include it, while **Steps to Reproduce** remains optional. |
+| Additional optional Bug Report field | Include **Expected Result**, describing what the user thought should happen; this field is optional. |
 | Scope | Version 1.0 includes Feedback as a distinct user-facing workflow with the three categories above |
 | Status | Scope and category decision recorded for review; processing design and API contract remain pending |
 | Remaining work | Confirm detailed UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
