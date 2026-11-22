@@ -75,13 +75,19 @@ PD-014 remains pending. Before route files are authored, the project owner must 
 
 No route group, redirect, alias, or page file should be created on the assumption that a page identity implies a URL.
 
-## 5. API route boundary
+## 5. Feedback scope decision and API boundary
+
+**FB-001 — owner decision recorded for review:** Feedback is included in Version 1.0 as a workflow separate from Contact. It must not be silently processed through `/api/contact`.
+
+The SDD does not establish a feedback endpoint or complete processing contract. SDD TD-011 remains open. The UI fields, processing destination, endpoint (if required), validation, response/error behavior, anti-abuse controls, failure handling, and retention must be defined and reconciled with SRS MOD-010 and the original Shared Components reference before implementation. This scope decision does not authorize a guessed route or handler.
+
+## 6. API route boundary
 
 The three SDD API paths are retained as endpoint candidates only. The SDD describes responsibilities but does not provide a complete machine-readable contract for request fields, response schemas, status codes, error envelopes, rate-limit thresholds, origin policy, or idempotency.
 
 Do not implement handlers until those contracts and their security controls are approved or explicitly recorded as implementation decisions under the governing change process.
 
-## 6. Implementation disposition
+## 7. Implementation disposition
 
 - The root introduction route is present in the SDD proposal and is consistent with the UIR entry experience, but the exact screen implementation must still follow the original PDF/prototype.
 - All other SDD routes remain proposed until PD-014 is closed.
@@ -89,7 +95,7 @@ Do not implement handlers until those contracts and their security controls are 
 - No application route files are created by this record.
 - No API handlers are created by this record.
 
-## 7. Source references
+## 8. Source references
 
 - SDD-CWK-001 Version 1.0, Sections 2, 4, 5.2, 5.3, and 6.
 - SRS-CWK-001 Version 1.0, PD-014 and the system/page/navigation requirements.
