@@ -84,7 +84,7 @@ Do not infer these answers from page names alone.
 | `/api/likes` | POST | Submit a like and return updated engagement information | Method and purpose stated; request schema, duplicate response representation, status codes, and error body undefined |
 | `/api/github` | GET | Retrieve GitHub repository information / Stargazer counts | Method and purpose stated; repository selection inputs, response schema, cache policy, status codes, and fallback contract undefined |
 
-No endpoint for feedback submission is established in the SDD API table. SRS MOD-010 includes Feedback, while SDD TD-011 marks feedback submission processing pending. Do not silently route feedback through `/api/contact` or create a new endpoint until the owner confirms the intended behavior.
+**Owner decision recorded for review (FB-001):** Feedback is included in Version 1.0 as a separate workflow from Contact. No feedback endpoint is established in the SDD API table; SDD TD-011 remains open for processing design. Do not silently route feedback through `/api/contact` or invent a feedback endpoint, schema, or retention policy. The separate workflow's UI fields, processing path, provider/storage, abuse controls, response behavior, and retention must be specified before implementation.
 
 ### 3.2 Contact behavior established by SDD
 
@@ -150,7 +150,7 @@ These names are not a complete environment contract. No secret values belong in 
 | Contact field constraints and API schema | Partial | Exact UI fields and validation constraints, request/response/error contract |
 | Contact anti-abuse and rate limits | Open | Approved abuse controls, thresholds, and failure behavior |
 | Contact sender/recipient and Resend operations | Open | Verified sender identity, recipient, environment mapping, retry/idempotency policy |
-| Feedback MOD-010 / SDD TD-011 | Open | Confirm whether feedback is in initial release, its UI, processing path, and retention |
+| Feedback MOD-010 / SDD TD-011 | **Scope decision recorded for review (FB-001): included in Version 1.0 as a workflow separate from Contact.** Processing design remains open. | Define UI and fields, processing destination/endpoint, request/response/error contract, abuse controls, failure behavior, and retention; verify against SRS/UI references |
 | Visitor identity / SDD TD-013 | Partial | Cookie lifetime, signing/rotation, SameSite, secure settings, identity migration |
 | Likes API schema | Partial | Content type/ID contract, GET/POST payloads and response/error contract |
 | Redis / SDD TD-012 and TD-014 | Open | Instance/environment separation, key naming, retention, backup/recovery, no-expiry confirmation |
@@ -167,7 +167,7 @@ These names are not a complete environment contract. No secret values belong in 
 | Maintain source-based route reconciliation | Proceed |
 | Create canonical public route files | Blocked on PD-014 and UI verification |
 | Implement contact/likes/GitHub handlers | Blocked on complete endpoint contracts and security/operational decisions |
-| Implement feedback endpoint | Blocked on SDD TD-011 and owner scope decision |
+| Implement separate Version 1.0 Feedback workflow | Scope confirmed by owner (FB-001); implementation remains blocked on SDD TD-011 processing and API/UI contracts |
 | Implement AI Usage activity provider | Blocked on SDD TD-006 |
 | Add route-specific visual components | Blocked on original reference inspection and route/page identity verification |
 | Production deployment configuration | Defer to deployment planning |
@@ -177,11 +177,11 @@ These names are not a complete environment contract. No secret values belong in 
 To close the next planning gate, the owner needs to decide or provide evidence for:
 1. The page/section/component classification and navigation destinations for the nine UIR identities in Section 2.2.
 2. **PD-014-A — recorded owner decision for review:** Personal and Professional contact entry points use one shared canonical `/contact` page with Personal/Professional visual context. This does not yet close PD-014; remaining route mappings and URL rules remain open.
-3. Whether Feedback (SRS MOD-010) is included in the initial release and, if so, whether it is a separate flow from contact inquiries.
+3. **FB-001 — owner scope decision recorded for review:** include Feedback (SRS MOD-010) in Version 1.0 as a workflow separate from Contact. Its processing design remains pending under SDD TD-011.
 4. The canonical route policy and dynamic slug rules after reviewing the original prototype and PDFs.
 5. The missing API schema details and operational policies listed in Sections 3 and 5.
 
-No default choices are silently selected in this document. PD-014-A is an explicit owner decision recorded for review, not an assertion that the full PD-014 route decision is closed. Once remaining decisions are supplied, update the route register and API specification through controlled review before creating route files or handlers.
+No default choices are silently selected in this document. PD-014-A and FB-001 are explicit owner decisions recorded for review. PD-014-A does not close the full route decision; FB-001 confirms Feedback scope only and does not close SDD TD-011 or authorize an endpoint. Once remaining decisions are supplied, update the route register and API specification through controlled review before creating route files or handlers.
 
 ## 8. Source references
 
