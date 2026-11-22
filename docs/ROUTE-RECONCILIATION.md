@@ -269,3 +269,7 @@ The owner has approved retaining each critical diagnostic log access-review regi
 ### Owner decision — access-review register format
 
 The owner has approved **Markdown (.md)** as the format for the critical diagnostic log access-review register. The register must use a consistent table for review entries and a separate section for outstanding actions. It remains restricted project administrative documentation, subject to the approved least-privilege access policy and one-year record-retention rule. Markdown format approval does not select a storage platform or location; the platform must still be verified to provide the required private access controls and secure deletion capability before the register is created.
+
+### Access-revocation evidence requirement
+
+The project owner approved requiring evidence of completed access revocations in the restricted access-review register. For each revocation, record the affected account, the date, the reviewer, and confirmation that the permission was removed. Do not include credentials or sensitive screenshots. This requirement supplements the approved access-review register format, storage restrictions, review ownership, and retention policy.
