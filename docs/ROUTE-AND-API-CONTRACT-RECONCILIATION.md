@@ -84,7 +84,13 @@ Do not infer these answers from page names alone.
 | `/api/likes` | POST | Submit a like and return updated engagement information | Method and purpose stated; request schema, duplicate response representation, status codes, and error body undefined |
 | `/api/github` | GET | Retrieve GitHub repository information / Stargazer counts | Method and purpose stated; repository selection inputs, response schema, cache policy, status codes, and fallback contract undefined |
 
-**Owner decision recorded for review (FB-001):** Feedback is included in Version 1.0 as a separate workflow from Contact. No feedback endpoint is established in the SDD API table; SDD TD-011 remains open for processing design. Do not silently route feedback through `/api/contact` or invent a feedback endpoint, schema, or retention policy. The separate workflow's UI fields, processing path, provider/storage, abuse controls, response behavior, and retention must be specified before implementation.
+**Owner decision recorded for review (FB-001):** Feedback is included in Version 1.0 as a separate workflow from Contact, with three approved submission categories:
+
+1. **Bug Report** — report a problem and provide reproduction steps.
+2. **General Feedback** — suggestions, comments, and improvement ideas.
+3. **Security Concern** — a safe initial description, with clear guidance not to submit credentials or sensitive exploit details through the public form.
+
+No feedback endpoint is established in the SDD API table; SDD TD-011 remains open for processing design. Do not silently route feedback through `/api/contact` or invent a feedback endpoint, schema, or retention policy. The detailed UI fields, processing path, provider/storage, abuse controls, response behavior, and retention must be specified before implementation.
 
 ### 3.2 Contact behavior established by SDD
 
