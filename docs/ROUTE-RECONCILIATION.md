@@ -171,3 +171,7 @@ The owner has approved **`cwk_visitor`** as the cookie name for the signed anony
 ### Owner decision — anonymous visitor cookie path
 
 The owner has approved **`/`** as the `cwk_visitor` cookie path. This makes the cookie available across the website's paths, including portfolio pages and API routes where the browser's cookie rules permit it. This decision specifies the cookie path only; cookie domain scope remains to be specified separately.
+
+### Owner decision — anonymous visitor cookie domain scope
+
+The owner has approved **omitting the `Domain` attribute** from the `cwk_visitor` cookie. The cookie is therefore host-only and is sent only to the exact hostname that issued it, rather than being shared automatically with sibling subdomains. This decision specifies domain scope only; the production hostname and any future need for cross-subdomain identity remain separate decisions.
