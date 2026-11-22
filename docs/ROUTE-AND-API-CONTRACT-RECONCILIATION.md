@@ -281,6 +281,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — Proceed event retry schedule
+
+The owner has approved the following bounded retry schedule for a failed `proceed_to_dual_profile` event write: make the initial write attempt immediately; if it fails, retry after **5 seconds**, then after **15 seconds**, then after **30 seconds**. This means a maximum of **four total write attempts** (one initial attempt plus three retries). After the final retry fails, stop automatic retries and safely log the unresolved failure. The retry mechanism must preserve the previously approved non-blocking visitor experience and must prevent duplicate event records or duplicate cumulative-count increments if an earlier attempt may have succeeded despite an ambiguous response. This approval defines the retry timing and attempt limit only; durable queueing, process restarts, idempotency implementation, replay/recovery, and alerting remain to be specified before implementation.
+
 ### Owner decision — Proceed event retry approach
 
 The owner has approved a **non-blocking, limited automatic retry approach** for failed `proceed_to_dual_profile` event writes to Upstash Redis. The visitor must be allowed to continue to the Dual Profile selection experience without waiting for retries. Retry processing must be designed to prevent duplicate event records and duplicate cumulative-count increments when an earlier write may have succeeded despite an ambiguous response; the approved unique-visitor deduplication rule remains in force. Retries must be bounded rather than continuing indefinitely, and failures that remain unresolved must be logged safely. This approval establishes the retry approach only; the retry schedule, maximum attempts or elapsed retry period, whether/how work is queued, persistence and durability of retry jobs, idempotency key and atomic Redis operation design, replay/recovery behavior, and alerting remain unresolved and must be specified before implementation.
