@@ -74,7 +74,7 @@ All other unresolved route, API, and configuration decisions remain unchanged.
 | Attachment count | Allow **one file per Bug Report**. |
 | Maximum attachment size | **5 MB per file**. |
 | Attachment submission method | Upload the optional attachment directly with the Bug Report as part of the same submission flow; no separate post-submission upload step. Transport, processing, storage, and retention details remain open. |
-| Attachment retention decision | Store the attachment temporarily for processing, then delete it; the exact temporary-storage location, deletion trigger/timing, and any failure/cleanup policy remain to be specified. |
+| Attachment retention decision | Store the attachment temporarily and delete it **24 hours after upload**. The temporary-storage location, enforcement mechanism, and failure/cleanup policy remain to be specified. |
 | Scope | Version 1.0 includes Feedback as a distinct user-facing workflow with the three categories above |
 | Status | Scope and category decision recorded for review; processing design and API contract remain pending |
 | Remaining work | Confirm detailed UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
