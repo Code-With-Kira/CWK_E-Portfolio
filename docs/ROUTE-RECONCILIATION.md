@@ -77,9 +77,13 @@ No route group, redirect, alias, or page file should be created on the assumptio
 
 ## 5. Feedback scope decision and API boundary
 
-**FB-001 — owner decision recorded for review:** Feedback is included in Version 1.0 as a workflow separate from Contact. It must not be silently processed through `/api/contact`.
+**FB-001 — owner decision recorded for review:** Feedback is included in Version 1.0 as a workflow separate from Contact, with three approved categories:
 
-The SDD does not establish a feedback endpoint or complete processing contract. SDD TD-011 remains open. The UI fields, processing destination, endpoint (if required), validation, response/error behavior, anti-abuse controls, failure handling, and retention must be defined and reconciled with SRS MOD-010 and the original Shared Components reference before implementation. This scope decision does not authorize a guessed route or handler.
+1. **Bug Report** — report a problem and provide reproduction steps.
+2. **General Feedback** — suggestions, comments, and improvement ideas.
+3. **Security Concern** — a safe initial description, with guidance not to submit credentials or sensitive exploit details through the public form.
+
+It must not be silently processed through `/api/contact`. The SDD does not establish a feedback endpoint or complete processing contract. SDD TD-011 remains open. The detailed UI fields, processing destination, endpoint (if required), validation, response/error behavior, anti-abuse controls, failure handling, and retention must be defined and reconciled with SRS MOD-010 and the original Shared Components reference before implementation. This scope decision does not authorize a guessed route or handler.
 
 ## 6. API route boundary
 
