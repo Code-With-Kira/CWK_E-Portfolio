@@ -364,3 +364,10 @@ The project owner approved the following policy for overdue scheduled access rev
 ### Seven-calendar-day overdue review resolution period
 
 The project owner approved a resolution period of seven calendar days after the overdue notification for completing an overdue access review and obtaining the required project-owner sign-off. If the review cannot be completed within that period, the project owner must document the reason, outstanding actions, and a revised completion date in the restricted access-review register. This resolution period does not automatically extend or renew any access.
+
+### Escalation for access reviews exceeding the seven-day resolution period
+
+The project owner approved escalation when an overdue access review is not completed within the approved seven-calendar-day resolution period:
+- Notify the project owner again and mark the review as escalated in the restricted access-review register.
+- Require a documented corrective action and a new completion date.
+- Preserve the existing access-control policy; escalation does not silently grant, renew, or extend access and does not change existing permissions.
