@@ -28,7 +28,7 @@ The SDD Section 5.2 proposes the following Next.js App Router paths:
 | `/professional/services` | Services | Proposed; reconcile navigation |
 | `/professional/articles` | Articles and Research | Proposed; reconcile navigation |
 | `/professional/articles/[slug]` | Article Details | Proposed; slug rules pending |
-| `/contact` | Shared Contact | Proposed; reconcile entry points |
+| `/contact` | Shared Contact | **Owner decision recorded for review (PD-014-A):** one shared canonical page with Personal/Professional visual context; full PD-014 route approval remains pending |
 | `/license` | License | Proposed |
 | `/terms` | Terms | Proposed |
 | `/privacy` | Privacy | Proposed |
@@ -37,11 +37,24 @@ The SDD Section 5.2 proposes the following Next.js App Router paths:
 | `/api/likes` | Like Processing | Path proposed; contract incomplete |
 | `/api/github` | GitHub Information Retrieval | Path proposed; contract incomplete |
 
-The SRS identifies final routes/URL structure as pending (PD-014), and the SDD requires reconciliation with approved UI navigation and the SRS. UIR additionally identifies Personal Work With Me, Common Questions, Activity/footer elements, Professional More About Me, and Resource/Activity elements. The SDD table does not assign standalone routes to all these identities. Some may be sections/components; the source does not settle that question.
+The SRS identifies final routes/URL structure as pending (PD-014), and the SDD requires reconciliation with approved UI navigation and the SRS. The owner has explicitly decided under PD-014-A that Personal and Professional contact entry points use one shared canonical `/contact` page with Personal/Professional visual context; this decision is recorded for review and does not close PD-014 as a whole. UIR additionally identifies Personal Work With Me, Common Questions, Activity/footer elements, Professional More About Me, and Resource/Activity elements. The SDD table does not assign standalone routes to all these identities. Some may be sections/components; the source does not settle that question.
 
 Dynamic projects and articles use unique slugs according to the SDD. Exact slug validation, collision rules, case handling, redirects, aliases, trailing-slash behavior, and canonical URL policy are not specified.
 
-**Disposition: full route implementation remains blocked.** The table is a source-grounded proposal, not a final approved URL map.
+**Disposition: full route implementation remains blocked.** The shared `/contact` destination decision is recorded for review; all remaining route decisions and the formal PD-014 closure are still outstanding. The table is a source-grounded proposal, not a final approved URL map.
+
+## 1A. Owner decision record — PD-014-A
+
+| Field | Recorded decision |
+|---|---|
+| Decision ID | PD-014-A |
+| Question | Personal and Professional contact destinations |
+| Owner decision | Option A — one shared canonical `/contact` page with Personal/Professional visual context |
+| Scope | Shared destination and reusable contact experience; preserve the relevant portfolio context in the presentation/content |
+| Status | Recorded as an explicit owner decision for review; not yet a formal amendment or closure of SRS PD-014 |
+| Remaining work | Verify the exact entry-point behavior and visual context against the original UI references; define any required context handoff without inventing API fields |
+
+All other unresolved route, API, and configuration decisions remain unchanged.
 
 ## 2. Module architecture
 
