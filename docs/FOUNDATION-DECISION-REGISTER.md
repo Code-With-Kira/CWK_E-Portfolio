@@ -194,3 +194,7 @@ The owner has selected a **one-day (24-hour) lifetime** for the anonymous visito
 ### Owner decision — anonymous visitor cookie renewal
 
 The owner has selected **Option A — Fixed expiration** for the anonymous visitor identity cookie. The cookie expires **24 hours after it is first issued**; visits and interactions do not reset or extend that expiration. This is a fixed 24-hour lifetime, not a sliding expiration. The previously recorded one-day lifetime remains in effect. Cookie signing/rotation, SameSite and other security settings remain open.
+
+### Owner decision — anonymous visitor cookie security baseline
+
+The owner has approved all three recommended security attributes for the anonymous visitor identity cookie: **HttpOnly**, **Secure**, and **SameSite=Lax**. The cookie must be inaccessible to client-side JavaScript through the HttpOnly attribute; Secure must be enabled for production HTTPS so the cookie is sent only over secure connections; and SameSite=Lax is the selected cross-site request mitigation baseline. These settings supplement, and do not change, the previously approved **fixed 24-hour expiration**. This approval does not resolve cookie signing algorithm, secret rotation, cookie name/path/domain, development-versus-production Secure behavior, CSRF/origin validation requirements, or visitor identity/hash migration policy; those details remain open for specification and verification.
