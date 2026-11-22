@@ -442,3 +442,14 @@ Incident records remain restricted project administrative documentation, separat
 ### Owner decision — formal security incident identifier format
 
 The project owner approved the unique formal security incident identifier format **`CWK-INC-YYYY-NNN`**. The four-digit year represents the calendar year in which the incident is first recorded; the three-digit sequence is assigned to each new incident within that year (for example, `CWK-INC-2026-001`). Each identifier must be unique and remain associated with the incident throughout its lifecycle and in all related restricted records and notifications. The sequence-allocation mechanism, concurrency protection, behavior when more than 999 incidents occur in a year, and any correction/voiding rules remain to be specified before implementation.
+
+### Owner decision — formal security incident severity classification
+
+The project owner approved a four-level severity classification for formal security incidents:
+
+1. **Critical** — confirmed or strongly suspected compromise with immediate, serious impact.
+2. **High** — significant security risk requiring urgent investigation and corrective action.
+3. **Medium** — limited security concern requiring investigation and tracked remediation.
+4. **Low** — minor security concern with limited impact and no immediate threat.
+
+The project owner retains authority to confirm or change an incident's severity. The classification labels and high-level descriptions are approved; detailed objective criteria, impact/likelihood thresholds, response time targets, escalation rules, and severity reassessment triggers remain to be specified before implementation.
