@@ -56,6 +56,19 @@ Dynamic projects and articles use unique slugs according to the SDD. Exact slug 
 
 All other unresolved route, API, and configuration decisions remain unchanged.
 
+## 1B. Owner decision record — FB-001
+
+| Field | Recorded decision |
+|---|---|
+| Decision ID | FB-001 |
+| Related requirements | SRS MOD-010 Feedback; SDD TD-011 |
+| Owner decision | Include a separate Feedback workflow in Version 1.0; do not merge it into Contact |
+| Scope | Version 1.0 includes Feedback as a distinct user-facing workflow |
+| Status | Scope decision recorded for review; processing design and API contract remain pending |
+| Remaining work | Confirm UI fields and behavior; define processing destination/endpoint, validation, request/response/error contract, anti-abuse controls, failure behavior, and retention; reconcile with original UI references |
+
+This decision does not establish a URL, API endpoint, storage provider, retention period, or delivery mechanism. SDD TD-011 remains open until those details are resolved through controlled review.
+
 ## 2. Module architecture
 
 The SDD specifies a **modular monolith**: one integrated Next.js application; microservices are not required for Version 1.0.
@@ -147,6 +160,7 @@ CI scope: dependency installation, lint, type checking, unit/component tests, pr
 | Implement contact/likes/GitHub handlers | Blocked on complete API contracts and feature security decisions |
 | Add package manifest and lockfile | Proceed with compatible exact versions and generated lockfile |
 | Add runnable CI | Requires manifest, committed lockfile, and deterministic scripts |
+| Separate Feedback workflow for Version 1.0 | Scope confirmed by owner (FB-001); processing implementation blocked on SDD TD-011 and complete contracts |
 | Production deployment configuration | Defer to deployment planning |
 
 ## 7. Source references
