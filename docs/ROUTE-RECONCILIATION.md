@@ -190,6 +190,10 @@ The owner has approved **lazy issuance** of the `cwk_visitor` cookie. The system
 
 
 
+### Owner decision — Durable retry queue cleanup failure policy
+
+The owner has approved the following cleanup-failure policy for durable retry queue records: when automatic deletion fails after a queue record has completed or reached the exhausted/failed terminal state and its 7-day retention period has elapsed, retry deletion **once every hour**. If the record remains undeleted **24 hours after its scheduled deletion time**, send **one administrative email alert** (not recurring alerts) to `laurenceegay1@gmail.com` using **Resend**, the project-selected email provider. This uses the previously approved administrative alert recipient and provider. The alert must identify the cleanup failure without exposing secrets or sensitive event payloads. This policy does not extend the record's approved retention period intentionally; it defines recovery attempts after the scheduled deletion time. The exact retry scheduler, alert sender identity/address/domain, alert delivery-failure handling, and final escalation/cleanup behavior remain to be specified before implementation.
+
 ### Owner decision — Durable retry queue record retention
 
 The owner has approved a **7-day retention period** for durable retry queue records after they reach a terminal state, whether successfully processed or exhausted/failed. Queue records must be automatically deleted after that retention period. This retention decision applies to retry-queue records only; it does not change the separately approved 90-day retention for individual `proceed_to_dual_profile` event records or the indefinite lifetime of the cumulative Proceed count. The exact timestamp basis, cleanup mechanism/schedule, handling of cleanup failures, and verification/monitoring of deletion remain to be specified before implementation.
