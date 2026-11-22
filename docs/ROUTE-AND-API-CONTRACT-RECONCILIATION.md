@@ -37,7 +37,7 @@ Every route below remains a **candidate**, not a canonical approved URL, until P
 | `/professional/services` | Services | Professional Services | Candidate; verify navigation |
 | `/professional/articles` | Articles and Research | Professional Articles & Researches | Candidate; verify exact label and scope |
 | `/professional/articles/[slug]` | Article Details | Professional article detail implied by Articles & Researches | Candidate; slug rules and invalid-slug behavior unspecified |
-| `/contact` | Shared Contact | Shared Contact; Personal Contact / Send a Message; professional inquiry pathways | Unresolved: shared destination versus distinct portfolio-specific experiences |
+| `/contact` | Shared Contact | Shared Contact; Personal Contact / Send a Message; professional inquiry pathways | **Owner decision recorded for review (PD-014-A):** one shared canonical `/contact` page with Personal/Professional visual context; formal route-map closure still pending |
 | `/license` | License | Shared License | Candidate |
 | `/terms` | Terms | Shared Terms | Candidate |
 | `/privacy` | Privacy | Shared Privacy | Candidate |
@@ -52,7 +52,7 @@ The UIR identifies these experiences/elements, but does not settle whether each 
 | UIR identity | What must be resolved |
 |---|---|
 | Personal Work With Me | Home section, standalone page, or entry point to a contact experience |
-| Personal Contact / Send a Message | Shared contact destination or distinct Personal contact experience |
+| Personal Contact / Send a Message | **Owner decision recorded for review (PD-014-A):** use the shared canonical `/contact` destination with Personal visual context; formal route-map closure still pending |
 | Personal Common Questions | Standalone page or section; confirm navigation and interaction |
 | Personal Activity | Embedded component or standalone activity destination |
 | Professional More About Me | Standalone page or section |
@@ -144,7 +144,7 @@ These names are not a complete environment contract. No secret values belong in 
 
 | ID / topic | Current state | Required closure evidence |
 |---|---|---|
-| SRS PD-014 / SDD TD-007 — canonical routes | Open; blocking route skeleton | Owner-approved route/navigation matrix verified against original UI PDFs and prototype |
+| SRS PD-014 / SDD TD-007 — canonical routes | Partially resolved; still open and blocking route skeleton. PD-014-A owner decision recorded for review: one shared `/contact` destination with Personal/Professional visual context. | Owner-reviewed route/navigation matrix verified against original UI PDFs and prototype; remaining mappings and URL rules still require closure |
 | UIR page identity mapping | Open | Page/section/component/destination classification for every unmapped identity |
 | Dynamic slug and not-found behavior | Open | Approved content identity and URL rules |
 | Contact field constraints and API schema | Partial | Exact UI fields and validation constraints, request/response/error contract |
@@ -176,12 +176,12 @@ These names are not a complete environment contract. No secret values belong in 
 
 To close the next planning gate, the owner needs to decide or provide evidence for:
 1. The page/section/component classification and navigation destinations for the nine UIR identities in Section 2.2.
-2. Whether Personal and Professional contact entry points share one contact page or have distinct experiences.
+2. **PD-014-A — recorded owner decision for review:** Personal and Professional contact entry points use one shared canonical `/contact` page with Personal/Professional visual context. This does not yet close PD-014; remaining route mappings and URL rules remain open.
 3. Whether Feedback (SRS MOD-010) is included in the initial release and, if so, whether it is a separate flow from contact inquiries.
 4. The canonical route policy and dynamic slug rules after reviewing the original prototype and PDFs.
 5. The missing API schema details and operational policies listed in Sections 3 and 5.
 
-No default choices are silently selected in this document. Once these decisions are supplied, update the route register and API specification through controlled review before creating route files or handlers.
+No default choices are silently selected in this document. PD-014-A is an explicit owner decision recorded for review, not an assertion that the full PD-014 route decision is closed. Once remaining decisions are supplied, update the route register and API specification through controlled review before creating route files or handlers.
 
 ## 8. Source references
 
